@@ -8,6 +8,6 @@ package ethicsprogram;
  *
  * @author 342889045
  */
-public class EthicsCase {
+public class Verdict {
     
 }
