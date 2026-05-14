@@ -8,6 +8,21 @@ package ethicsprogram;
  *
  * @author 342889045
  */
-public class IntelPropCase {
+public class IntelPropCase extends EthicsCase {
+private String ipType;
+
+public IntelPropCase(String caseTitle, String description, String ipType) {
+super(caseTitle, description);
+this.ipType = ipType;
+}
+
+public String getipType() {
+    return ipType;
+}
+@Override
+
+public String toString() {
+    return "aaa"; //so what do i put for toString?
+}
     
 }

@@ -8,6 +8,21 @@ package ethicsprogram;
  *
  * @author 342889045
  */
-public class MisinfoCase {
+public class MisinfoCase extends EthicsCase {
+private String mediaType;
+
+public MisinfoCase(String caseTitle, String description, String mediaType) {
+super(caseTitle, description);
+this.mediaType = mediaType;
+}
+
+public String getMediaType() {
+    return mediaType;
+}
+@Override
+
+public String toString() {
+    return "aaa"; //so what do i put for toString?
+}
     
 }
