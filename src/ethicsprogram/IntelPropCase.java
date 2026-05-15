@@ -12,7 +12,7 @@ public class IntelPropCase extends EthicsCase {
 private String ipType;
 
 public IntelPropCase(String caseTitle, String description, String ipType) {
-super(caseTitle, description);
+super(caseTitle, description, "Intellectual Property");
 this.ipType = ipType;
 }
 

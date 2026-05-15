@@ -12,7 +12,7 @@ public class MisinfoCase extends EthicsCase {
 private String mediaType;
 
 public MisinfoCase(String caseTitle, String description, String mediaType) {
-super(caseTitle, description);
+super(caseTitle, description, "Misinformation Case");
 this.mediaType = mediaType;
 }
 
