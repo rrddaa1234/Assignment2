@@ -16,9 +16,9 @@ public class Verdict {
     Verdict(){
         
     }
-    Verdict(String caseTitle, String verdict, String reason){
+    Verdict(String caseTitle, String studentVerdict, String reason){
         this.caseTitle = caseTitle;
-        this.verdict = studentVerdict;
+        this.studentVerdict = studentVerdict;
         this.reason = reason;
     }
     
