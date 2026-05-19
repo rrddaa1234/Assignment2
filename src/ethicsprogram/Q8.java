@@ -184,7 +184,7 @@ MainMenu.c[7].verdict.setCaseTitle(jLabel1.getText());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-MainMenu.c[7].verdict.setStudentVerdict("unethical");
+MainMenu.c[7].verdict.setStudentVerdict("ethical");
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
