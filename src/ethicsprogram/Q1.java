@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ethicsprogram;
+import ethicsprogram.MainMenu;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
 
@@ -177,17 +178,21 @@ public class Q1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+MainMenu.c[0].verdict.setReason(jTextField2.getText());
+MainMenu.c[0].verdict.setCaseTitle(jLabel1.getText());
+    
+     
         new Q2().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
+     MainMenu.c[0].verdict.setStudentVerdict("ethical");
+     
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
+     MainMenu.c[0].verdict.setStudentVerdict("unethical");
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     /**
