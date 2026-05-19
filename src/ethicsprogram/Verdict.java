@@ -40,6 +40,7 @@ public class Verdict {
     public String getStudentVerdict(){
         return studentVerdict;
     }
+    @Override
     public String toString(){
         
         //Incomplete
