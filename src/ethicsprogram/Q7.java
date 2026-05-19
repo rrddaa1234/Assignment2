@@ -24,6 +24,8 @@ public class Q7 extends javax.swing.JFrame {
             public void windowActivated(WindowEvent e) {
                 System.out.println("JFrame is now focused!");
                 jLabel1.setText(MainMenu.c[6].getCaseTitle());
+                jLabel2.setText(MainMenu.c[6].getCategory());
+                jTextField1.setText(MainMenu.c[6].getCaseDescription());
                 }
         });        
     }
