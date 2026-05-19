@@ -9,13 +9,12 @@ package ethicsprogram;
  * @author 342889045
  */
 public class MainMenu extends javax.swing.JFrame {
-
+public static EthicsCase c[] = new EthicsCase [8];
     /**
      * Creates new form MainMenu
      */
     public MainMenu() {
         initComponents();
-        EthicsCase c[] = new EthicsCase [8];
         c[0] = new PrivacyCase ("The Always-On Microphone", "A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.", "Audio");
         c[1] = new AlgorithmCase ("The Biased Hiring Bot", "A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants.", "Gender Bias");
         c[2] = new MisinfoCase ("The Deepfake Politician", "A deepfake video of a candidate saying things they never said spread widely online during an election before being identified as fake.", "Deep Fake Video");

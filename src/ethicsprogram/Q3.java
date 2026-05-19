@@ -4,6 +4,9 @@
  */
 package ethicsprogram;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 /**
  *
  * @author 342889045
@@ -15,6 +18,14 @@ public class Q3 extends javax.swing.JFrame {
      */
     public Q3() {
         initComponents();
+        
+               addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowActivated(WindowEvent e) {
+                System.out.println("JFrame is now focused!");
+                jLabel1.setText(MainMenu.c[2].getCaseTitle());
+                }
+        });        
     }
 
     /**
