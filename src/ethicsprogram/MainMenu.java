@@ -16,6 +16,7 @@ public static EthicsCase c[] = new EthicsCase [8];
     public MainMenu() {
         initComponents();
         c[0] = new PrivacyCase ("The Always-On Microphone", "A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.", "Audio");
+        
         c[1] = new AlgorithmCase ("The Biased Hiring Bot", "A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants.", "Gender Bias");
         c[2] = new MisinfoCase ("The Deepfake Politician", "A deepfake video of a candidate saying things they never said spread widely online during an election before being identified as fake.", "Deep Fake Video");
         c[3] = new IntelPropCase ("AI Trained on Artist Work", "An AI image generator was trained on millions of artworks scraped without permission. Artists receive no credit or payment.", "Ai-gen Artwork");
