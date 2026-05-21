@@ -24,7 +24,7 @@ public class Q1 extends javax.swing.JFrame {
             public void windowActivated(WindowEvent e) {
                 System.out.println("JFrame is now focused!");
                 System.out.println(MainMenu.c[0].getCaseTitle());
-                jLabel1.setText(MainMenu.c[0].getCaseTitle());
+                jLabel1.setText("Case #1: "+MainMenu.c[0].getCaseTitle());
                 jLabel2.setText(MainMenu.c[0].getCategory());
                 jTextArea2.setText(MainMenu.c[0].getCaseDescription());
                 }
@@ -143,8 +143,8 @@ public class Q1 extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addGap(0, 337, Short.MAX_VALUE))
-                            .addComponent(jScrollPane2)
-                            .addComponent(jScrollPane3))
+                            .addComponent(jScrollPane3)
+                            .addComponent(jScrollPane2))
                         .addGap(51, 51, 51))))
         );
         layout.setVerticalGroup(
@@ -155,7 +155,7 @@ public class Q1 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton1)
@@ -168,7 +168,7 @@ public class Q1 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         pack();
@@ -176,7 +176,6 @@ public class Q1 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 MainMenu.c[0].verdict.setReason(jTextArea2.getText());
-
 MainMenu.c[0].verdict.setCaseTitle(jLabel1.getText());
 if (jRadioButton2.isSelected()){
       MainMenu.c[0].verdict.setStudentVerdict("Unethical");
@@ -185,27 +184,29 @@ else if (jRadioButton1.isSelected()){
       MainMenu.c[0].verdict.setStudentVerdict("Ethical");
 }
 
-
-
-    
-     
         new Q2().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-     MainMenu.c[0].verdict.setStudentVerdict("ethical");
+        jRadioButton2.setSelected(false);
      
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-     MainMenu.c[0].verdict.setStudentVerdict("unethical");
+        jRadioButton1.setSelected(false);
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 MainMenu.c[0].verdict.setReason(jTextArea2.getText());
 MainMenu.c[0].verdict.setCaseTitle(jLabel1.getText());
+if (jRadioButton2.isSelected()){
+      MainMenu.c[0].verdict.setStudentVerdict("Unethical");
+}
+else if (jRadioButton1.isSelected()){
+      MainMenu.c[0].verdict.setStudentVerdict("Ethical");
+}
         
         
         new MainMenu().setVisible(true);
