@@ -26,8 +26,15 @@ public class Q8 extends javax.swing.JFrame {
                 jLabel1.setText("Case #8: "+MainMenu.c[7].getCaseTitle());
                 jLabel2.setText(MainMenu.c[7].getCategory());
                 jTextArea2.setText(MainMenu.c[7].getCaseDescription());
+                if (MainMenu.c[7].verdict.getStudentVerdict().equals("Ethical")) {
+                    jRadioButton1.setSelected(true);  //This so if the user goes back to a page, it remembers what they put
                 }
-        });        
+                else if (MainMenu.c[7].verdict.getStudentVerdict().equals("Unethical")) {
+                    jRadioButton2.setSelected(true);  //This so if the user goes back to a page, it remembers what they put
+                }
+            }
+        }
+    );        
     }
 
     /**
@@ -50,7 +57,7 @@ public class Q8 extends javax.swing.JFrame {
         jTextArea2 = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
-        jTextField1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,7 +84,7 @@ public class Q8 extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(255, 153, 153));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("<- Back to main menu");
+        jButton1.setText("<- Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -110,47 +117,43 @@ public class Q8 extends javax.swing.JFrame {
         jTextArea3.setText("(Click to edit)");
         jScrollPane3.setViewportView(jTextArea3);
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(204, 0, 0));
-        jTextField1.setText("You must select Ethical/Unethical for a previous case!");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel4.setText("Make sure you have everything selected before moving on");
+        jLabel4.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(104, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(27, 27, 27))
             .addGroup(layout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2))
-                        .addGap(161, 161, 161))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jRadioButton1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jRadioButton2))
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                                .addComponent(jButton2)))
-                        .addContainerGap(80, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton2))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jRadioButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jRadioButton2)))
+                        .addGap(42, 42, 42))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,7 +162,7 @@ public class Q8 extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addGap(18, 21, Short.MAX_VALUE)
+                .addGap(18, 19, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -174,8 +177,8 @@ public class Q8 extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addComponent(jButton2))
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addComponent(jLabel4)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
@@ -187,7 +190,6 @@ public class Q8 extends javax.swing.JFrame {
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         jRadioButton1.setSelected(false);
-
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -215,23 +217,26 @@ public class Q8 extends javax.swing.JFrame {
             MainMenu.c[7].verdict.setStudentVerdict("Ethical");
         }
 
-        if (MainMenu.c[7].verdict.getStudentVerdict().equals("Ethical") == true) {
-        //new Verdictpage().setVisible(true);
-        //this.setVisible(false);
-        System.out.println("aaa");
+        
+        //All this is doing is making sure the ethical/unethical radio buttons are selected for all of them.
+        if ((MainMenu.c[0].verdict.getStudentVerdict().equals("Ethical") == true || MainMenu.c[0].verdict.getStudentVerdict().equals("Unethical") == true) &&
+            (MainMenu.c[1].verdict.getStudentVerdict().equals("Ethical") == true || MainMenu.c[1].verdict.getStudentVerdict().equals("Unethical") == true) &&
+            (MainMenu.c[2].verdict.getStudentVerdict().equals("Ethical") == true || MainMenu.c[2].verdict.getStudentVerdict().equals("Unethical") == true) &&
+            (MainMenu.c[3].verdict.getStudentVerdict().equals("Ethical") == true || MainMenu.c[3].verdict.getStudentVerdict().equals("Unethical") == true) &&
+            (MainMenu.c[4].verdict.getStudentVerdict().equals("Ethical") == true || MainMenu.c[4].verdict.getStudentVerdict().equals("Unethical") == true) &&
+            (MainMenu.c[5].verdict.getStudentVerdict().equals("Ethical") == true || MainMenu.c[5].verdict.getStudentVerdict().equals("Unethical") == true) &&
+            (MainMenu.c[6].verdict.getStudentVerdict().equals("Ethical") == true || MainMenu.c[6].verdict.getStudentVerdict().equals("Unethical") == true) &&
+            (MainMenu.c[7].verdict.getStudentVerdict().equals("Ethical") == true || MainMenu.c[7].verdict.getStudentVerdict().equals("Unethical") == true)) {
+        new Verdictpage().setVisible(true);
+        this.setVisible(false);
+        System.out.println("all things selected, moving to the end");
         }
-        else if (MainMenu.c[7].verdict.getStudentVerdict().equals("Unethical") == true) {
-        //new Verdictpage().setVisible(true);
-        //this.setVisible(false);
-        System.out.println("bbb");
-        }
-        else System.out.println("ccc");
 
+        else {System.out.println("one of the things isn't selected");
+        jLabel4.setEnabled(true);
+        jLabel4.setText("You haven't selected Ethical/Unethical for a previous case!");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -274,12 +279,12 @@ public class Q8 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

@@ -27,7 +27,13 @@ public class Q1 extends javax.swing.JFrame {
                 jLabel1.setText("Case #1: "+MainMenu.c[0].getCaseTitle());
                 jLabel2.setText(MainMenu.c[0].getCategory());
                 jTextArea2.setText(MainMenu.c[0].getCaseDescription());
+                if (MainMenu.c[0].verdict.getStudentVerdict().equals("Ethical")) {
+                    jRadioButton1.setSelected(true);  //This so if the user goes back to a page, it remembers what they put
                 }
+                else if (MainMenu.c[0].verdict.getStudentVerdict().equals("Unethical")) {
+                    jRadioButton2.setSelected(true);  //This so if the user goes back to a page, it remembers what they put
+                }
+            }
         });        
 
 
@@ -55,6 +61,7 @@ public class Q1 extends javax.swing.JFrame {
         jTextArea2 = new javax.swing.JTextArea();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextArea3 = new javax.swing.JTextArea();
+        jLabel4 = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -118,6 +125,10 @@ public class Q1 extends javax.swing.JFrame {
         jTextArea3.setText("(Click to edit)");
         jScrollPane3.setViewportView(jTextArea3);
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 0, 204));
+        jLabel4.setText("Warning: going back to the main menu will reset everything!");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -146,6 +157,10 @@ public class Q1 extends javax.swing.JFrame {
                             .addComponent(jScrollPane3)
                             .addComponent(jScrollPane2))
                         .addGap(51, 51, 51))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(jLabel4)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,7 +183,9 @@ public class Q1 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
@@ -255,6 +272,7 @@ else if (jRadioButton1.isSelected()){
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;

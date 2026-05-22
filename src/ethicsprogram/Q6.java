@@ -26,7 +26,13 @@ public class Q6 extends javax.swing.JFrame {
                 jLabel1.setText("Case #6: "+MainMenu.c[5].getCaseTitle());
                 jLabel2.setText(MainMenu.c[5].getCategory());
                 jTextArea2.setText(MainMenu.c[5].getCaseDescription());
+                if (MainMenu.c[5].verdict.getStudentVerdict().equals("Ethical")) {
+                    jRadioButton1.setSelected(true);  //This so if the user goes back to a page, it remembers what they put
                 }
+                else if (MainMenu.c[5].verdict.getStudentVerdict().equals("Unethical")) {
+                    jRadioButton2.setSelected(true);  //This so if the user goes back to a page, it remembers what they put
+                }
+            }
         });        
     }
 
@@ -76,7 +82,7 @@ public class Q6 extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(255, 153, 153));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("<- Back to main menu");
+        jButton1.setText("<- Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -129,7 +135,7 @@ public class Q6 extends javax.swing.JFrame {
                                 .addComponent(jRadioButton2))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 224, Short.MAX_VALUE)
                                 .addComponent(jButton2))
                             .addComponent(jScrollPane2)
                             .addGroup(layout.createSequentialGroup()

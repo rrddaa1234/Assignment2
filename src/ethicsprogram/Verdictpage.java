@@ -23,11 +23,11 @@ public class Verdictpage extends javax.swing.JFrame {
         for (int i = 0; i < 8; i++){
             String verd = MainMenu.c[i].verdict.getStudentVerdict();
 
-            if (verd.equals("ethical")){
+            if (verd.equals("Ethical")){
                 ethic ++;
             }
                 
-            else if (verd.equals("unethical")){
+            else if (verd.equals("Unethical")){
             unethic ++;
         }
         }//end of for loop
@@ -44,24 +44,24 @@ public class Verdictpage extends javax.swing.JFrame {
                 }
         });        
         //Setting the USERS "character"
-        if (ethic <=2){
+        if (unethic <=2){
             //Tech Optimist
-            jTextArea1.setText("You are a Technology Optimist"
+            jTextArea1.setText("You are a Technology Optimist. "
                     + "You trust everything you see on the internet and have a positive outlook on technology!");
         }
-        else if (ethic <=4){
+        else if (unethic > 2 || unethic < 5){
             //Cautious Realist
-            jTextArea1.setText("You are a Cautious Realist"
-                    + "You are hesitate to believing everything you see on the internet");
+            jTextArea1.setText("You are a Cautious Realist. "
+                    + "You are hesitant to believing everything you see on the internet");
         }
-        else if (ethic <=6){
+        else if (unethic > 4 || unethic < 7){
             //Critical Thinker
-            jTextArea1.setText("You are a Critical Thinker"
+            jTextArea1.setText("You are a Critical Thinker. "
                     + "You question everything you see on the internet and constantly think of ethics when you surf the internet");
         }
-        else if (ethic <=8){
+        else if (unethic >=7){
             //Ethics Watchdog
-            jTextArea1.setText("You are a Ethics Watchdog"
+            jTextArea1.setText("You are a Ethics Watchdog. "
                     + "You hold all web designers, corporations, and media accountable to providing proper ethical content");
         }
     }
@@ -86,7 +86,7 @@ public class Verdictpage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Results Page");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -104,20 +104,18 @@ public class Verdictpage extends javax.swing.JFrame {
         jLabel5.setText("num");
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Overview:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(71, 71, 71)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,16 +126,18 @@ public class Verdictpage extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGap(34, 34, 34)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jLabel2)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel3))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(108, 108, 108))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(180, 180, 180))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,7 +156,7 @@ public class Verdictpage extends javax.swing.JFrame {
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
