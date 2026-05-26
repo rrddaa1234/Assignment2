@@ -234,7 +234,7 @@ public class Q8 extends javax.swing.JFrame {
 
         else {System.out.println("one of the things isn't selected");
         jLabel4.setEnabled(true);
-        jLabel4.setText("You haven't selected Ethical/Unethical for a previous case!");
+        jLabel4.setText("You haven't selected Ethical/Unethical for a previous case(s)!");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 

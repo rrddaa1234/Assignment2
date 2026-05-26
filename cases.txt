@@ -1,0 +1,2 @@
+privacycase, "The Always-On Microphone, A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.", "Audio"
+misniformation, "The Biased Hiring Bot", "A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants.", "Gender Bias"
