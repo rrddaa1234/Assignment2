@@ -20,21 +20,33 @@ public static EthicsCase c[] = new EthicsCase [8];
     public MainMenu() {
         initComponents();
         try {
-            Scanner sc = new Scanner(new File("filewithstuff"));
+            Scanner sc = new Scanner(new File("cases.txt"));
             while (sc.hasNext()) {
                 String output = sc.nextLine();
                 String[] info = output.split(",");
-                if (info [0].equals(PrivacyCase))
-                    c[counter]= new PrivacyCase[0];
-                    else if()
-                
+                for (int i = 0; i < 8; i++) {
+                    String[] cases = info[i].split("...");
+                    if (cases[0].equals("PrivacyCase")) {
+                        c[i]= new PrivacyCase(info[1], info[2], info[3]);
+                    }
+                    else if(cases[0].equals("AlgorithmCase")) {
+                        c[i]= new AlgorithmCase(info[1], info[2], info[3]);
+                    }
+                    else if(cases[0].equals("MisinfoCase")) {
+                        c[i]= new MisinfoCase(info[1], info[2], info[3]);
+                    }
+                    else if(cases[0].equals("IntelPropCase")) {
+                        c[i]= new IntelPropCase(info[1], info[2], info[3]);
+                    }
+                }//end for-loop
             }
             sc.close();
         }
 
         catch (IOException ioException) {
-            
+            System.out.println("error");
         }
+        /*
         c[0] = new PrivacyCase ("The Always-On Microphone", "A smart speaker company recorded household conversations even when the device was not activated. Employees reviewed the recordings.", "Audio");
         
         c[1] = new AlgorithmCase ("The Biased Hiring Bot", "A tech company's AI screening tool ranked male applicants higher than equally qualified female applicants.", "Gender Bias");
@@ -44,7 +56,7 @@ public static EthicsCase c[] = new EthicsCase [8];
         c[5] = new AlgorithmCase ("Truth Central fake news!", "Algorithms have been found to only feed users what they like to watch rather than the truth. But the site advertises the truth.", "Fake news");
         c[6] = new MisinfoCase ("Scammer everywhere", "A site mainly used to connect people together has had a problem with scammers pretending to be someone's relative asking for large sums of money. The site says they can’t do anything about it.", "Scammers");
         c[7] = new IntelPropCase ("Look Maxing Ai App Case", "A facial rating site and rates your looks is secretly taking your face shape and creating the most optimal and attractive looking ai model.","Ai training");
-              
+*/
     }
 
     /**
