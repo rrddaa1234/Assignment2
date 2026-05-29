@@ -7,6 +7,10 @@ package ethicsprogram;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import java.io.PrintWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  *
  * @author 342889045
@@ -63,6 +67,16 @@ public class Verdictpage extends javax.swing.JFrame {
             //Ethics Watchdog
             jTextArea1.setText("You are a Ethics Watchdog. "
                     + "You hold all web designers, corporations, and media accountable to providing proper ethical content");
+        }
+        try{
+            FileWriter writer = new FileWriter("results.txt", true);
+            PrintWriter output = new PrintWriter(writer);
+            //Ethical count will be the numerator
+            output.printf("%d/8", ethic);
+            output.close();
+        }
+        catch(IOException e){
+            System.out.print("Error in writing to results file");
         }
     }
 
