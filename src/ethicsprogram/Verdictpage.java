@@ -72,7 +72,7 @@ public class Verdictpage extends javax.swing.JFrame {
             FileWriter writer = new FileWriter("results.txt", true);
             PrintWriter output = new PrintWriter(writer);
             //Ethical count will be the numerator
-            output.printf("%d/8", ethic);
+            output.printf("Out of 8 Cases:   (%d) were Ethical / (%d) were Unethical", ethic, unethic);
             output.close();
         }
         catch(IOException e){
