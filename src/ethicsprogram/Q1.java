@@ -24,9 +24,9 @@ public class Q1 extends javax.swing.JFrame {
             public void windowActivated(WindowEvent e) {
                 System.out.println("JFrame is now focused!");
                 System.out.println(MainMenu.c[0].getCaseTitle());
-                jLabel1.setText("Case #1: "+MainMenu.c[0].getCaseTitle());
-                jLabel2.setText(MainMenu.c[0].getCategory());
-                jTextArea2.setText(MainMenu.c[0].getCaseDescription());
+                jLabel1.setText("Case #1: "+MainMenu.c[0].getCaseTitle());   //This sets the title
+                jLabel2.setText(MainMenu.c[0].getCategory());   //This sets the category
+                jTextArea2.setText(MainMenu.c[0].getCaseDescription());     //This sets the description
                 if (MainMenu.c[0].verdict.getStudentVerdict().equals("Ethical")) {
                     jRadioButton1.setSelected(true);  //This so if the user goes back to a page, it remembers what they put
                 }
@@ -195,18 +195,18 @@ public class Q1 extends javax.swing.JFrame {
 MainMenu.c[0].verdict.setReason(jTextArea2.getText());
 MainMenu.c[0].verdict.setCaseTitle(jLabel1.getText());
 if (jRadioButton2.isSelected()){
-      MainMenu.c[0].verdict.setStudentVerdict("Unethical");
+      MainMenu.c[0].verdict.setStudentVerdict("Unethical"); //This checks which of the radio button were selected
 }
 else if (jRadioButton1.isSelected()){
       MainMenu.c[0].verdict.setStudentVerdict("Ethical");
 }
 
-        new Q2().setVisible(true);
+        new Q2().setVisible(true);   //This goes to the next page
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        jRadioButton2.setSelected(false);
+        jRadioButton2.setSelected(false);   //This deselects the button if the other one was pressed
      
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
@@ -219,7 +219,7 @@ else if (jRadioButton1.isSelected()){
 MainMenu.c[0].verdict.setReason(jTextArea2.getText());
 MainMenu.c[0].verdict.setCaseTitle(jLabel1.getText());
 if (jRadioButton2.isSelected()){
-      MainMenu.c[0].verdict.setStudentVerdict("Unethical");
+      MainMenu.c[0].verdict.setStudentVerdict("Unethical");   //This sets the verdict to whichever the buttons were pressed
 }
 else if (jRadioButton1.isSelected()){
       MainMenu.c[0].verdict.setStudentVerdict("Ethical");

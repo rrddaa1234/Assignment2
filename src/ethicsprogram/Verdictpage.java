@@ -48,7 +48,7 @@ public class Verdictpage extends javax.swing.JFrame {
                 }
         });        
         //Setting the USERS "character"
-        if (unethic <= 2){
+        if (unethic <= 2){   //These determines what the user is based on their actions
             //Tech Optimist
             jTextArea1.setText("You are a Technology Optimist. "
                     + "You trust everything you see on the internet and have a positive outlook on technology!");
@@ -72,7 +72,7 @@ public class Verdictpage extends javax.swing.JFrame {
             FileWriter writer = new FileWriter("results.txt", true);
             PrintWriter output = new PrintWriter(writer);
             //Ethical count will be the numerator
-            output.printf("Out of 8 Cases:   (%d) were Ethical / (%d) were Unethical", ethic, unethic);
+            output.printf("Out of 8 Cases:   (%d) were Ethical / (%d) were Unethical", ethic, unethic); //This prints everything to a file
             output.close();
         }
         catch(IOException e){
