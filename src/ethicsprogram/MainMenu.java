@@ -20,7 +20,7 @@ public static EthicsCase c[] = new EthicsCase [8];
     public MainMenu() {
         initComponents();
         try {
-          
+          // Takes the data that states the casetype and compares it to then yuou the Object to fill out the other sub classes
             int i = 0;
             Scanner sc = new Scanner(new File("cases.txt"));
             while (sc.hasNext() && i < 8) {
@@ -29,7 +29,7 @@ public static EthicsCase c[] = new EthicsCase [8];
                 
                 String casetype = info[0].replace("\"", "");
 
-
+// if statements that compare
                     if (casetype.equals("PrivacyCase")) {
                         c[i]= new PrivacyCase(info[1], info[2], info[3]);
                     }
@@ -47,7 +47,7 @@ public static EthicsCase c[] = new EthicsCase [8];
             }
             sc.close();
         }
-
+// Error
         catch (IOException ioException) {
             System.out.println("error");
         }
