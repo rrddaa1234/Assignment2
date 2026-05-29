@@ -23,21 +23,25 @@ public static EthicsCase c[] = new EthicsCase [8];
             Scanner sc = new Scanner(new File("cases.txt"));
             while (sc.hasNext()) {
                 String output = sc.nextLine();
-                String[] info = output.split(",");
+                String[] cases = output.split("...");
                 for (int i = 0; i < 8; i++) {
-                    String[] cases = info[i].split("...");
-                    if (cases[0].equals("PrivacyCase")) {
+                    //String[] info = new String[3];
+
+                    String[] info = cases[i].split(",");
+
+                    if (info[0].equals("PrivacyCase")) {
                         c[i]= new PrivacyCase(info[1], info[2], info[3]);
                     }
-                    else if(cases[0].equals("AlgorithmCase")) {
+                    else if(info[0].equals("AlgorithmCase")) {
                         c[i]= new AlgorithmCase(info[1], info[2], info[3]);
                     }
-                    else if(cases[0].equals("MisinfoCase")) {
+                    else if(info[0].equals("MisinfoCase")) {
                         c[i]= new MisinfoCase(info[1], info[2], info[3]);
                     }
-                    else if(cases[0].equals("IntelPropCase")) {
+                    else if(info[0].equals("IntelPropCase")) {
                         c[i]= new IntelPropCase(info[1], info[2], info[3]);
                     }
+
                 }//end for-loop
             }
             sc.close();
