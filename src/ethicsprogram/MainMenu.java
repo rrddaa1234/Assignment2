@@ -26,7 +26,7 @@ public static EthicsCase c[] = new EthicsCase [8];
             while (sc.hasNext() && i < 8) {
                 String line = sc.nextLine();
                 String[] info = line.split(",");
-                
+                // removes any clutter of the first dataset
                 String casetype = info[0].replace("\"", "");
 
 // if statements that compare

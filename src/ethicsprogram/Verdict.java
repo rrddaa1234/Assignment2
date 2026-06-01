@@ -12,6 +12,7 @@ public class Verdict {
     private String caseTitle;
     private String studentVerdict;
     private String reason;
+    private final String D_reason = "Default";
     
     Verdict(){
         this.caseTitle = "";
@@ -45,8 +46,8 @@ public class Verdict {
     @Override
     public String toString(){
         
-        //Incomplete
-        return "Title: " + caseTitle + "";
+        //returns the title to the user in string form
+        return "Title: " + caseTitle + " verdict: "+ studentVerdict;
     }
 }
 

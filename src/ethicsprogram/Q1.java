@@ -225,7 +225,7 @@ else if (jRadioButton1.isSelected()){
       MainMenu.c[0].verdict.setStudentVerdict("Ethical");
 }
         
-        
+        // Go back button to allow user to move back a page
         new MainMenu().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed

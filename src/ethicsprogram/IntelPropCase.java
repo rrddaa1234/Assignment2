@@ -9,6 +9,7 @@ package ethicsprogram;
  * @author 342889045
  */
 public class IntelPropCase extends EthicsCase {
+    // a subclass
 private String ipType;
 
 public IntelPropCase(String caseTitle, String description, String ipType) {

@@ -12,9 +12,11 @@ public class EthicsCase {
      private String caseTitle;
     private String description;
     private String category;
+    // is associated from the verdict class
     public Verdict verdict;
     
     EthicsCase(String caseTitle, String description, String category){
+        // sets verdict and calls on the verdict method
     this.caseTitle = caseTitle;
     this.description = description;
     this.category = category;
