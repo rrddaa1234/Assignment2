@@ -9,15 +9,18 @@ package ethicsprogram;
  * @author 342889045
  */
 public class Verdict {
+    // variables 
     private String caseTitle;
     private String studentVerdict;
     private String reason;
+    // 
     private final String D_reason = "Default";
     
     Verdict(){
+        // sets reason as default
         this.caseTitle = "";
         this.studentVerdict = "";
-        this.reason = "";
+        this.reason = D_reason;
     }
     Verdict(String caseTitle, String studentVerdict, String reason){
         this.caseTitle = caseTitle;

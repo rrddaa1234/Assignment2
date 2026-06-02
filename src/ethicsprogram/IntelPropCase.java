@@ -13,10 +13,11 @@ public class IntelPropCase extends EthicsCase {
 private String ipType;
 
 public IntelPropCase(String caseTitle, String description, String ipType) {
+    // super gives the case title to the super class.
 super(caseTitle, description, "Intellectual Property");
 this.ipType = ipType;
 }
-
+// gives the type back to user
 public String getipType() {
     return ipType;
 }

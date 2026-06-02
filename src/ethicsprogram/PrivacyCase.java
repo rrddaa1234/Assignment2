@@ -12,10 +12,11 @@ public class PrivacyCase extends EthicsCase {
 private String dataType;
 
 public PrivacyCase(String caseTitle, String description, String dataType) {
+    // gives the super class
 super(caseTitle, description, "Privacy Case");
 this.dataType = dataType;
 }
-
+// returns the type
 public String getDataType() {
     return dataType;
 }

@@ -193,10 +193,12 @@ public class Q1 extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 MainMenu.c[0].verdict.setReason(jTextArea2.getText());
+// gets the reasoning from it
 MainMenu.c[0].verdict.setCaseTitle(jLabel1.getText());
+// determines verdict
 if (jRadioButton2.isSelected()){
       MainMenu.c[0].verdict.setStudentVerdict("Unethical"); //This checks which of the radio button were selected
-}
+}// determines verdict
 else if (jRadioButton1.isSelected()){
       MainMenu.c[0].verdict.setStudentVerdict("Ethical");
 }

@@ -23,7 +23,7 @@ public class EthicsCase {
     this.verdict = new Verdict();
     
     }
-    
+    // gives the case title back to user
     public String getCaseTitle(){
         return caseTitle;
     }
@@ -35,7 +35,7 @@ public class EthicsCase {
     public String getCategory(){
         return category;
     }
-    
+    // String returns the values... redundent
     public String toString(){
         
         
